@@ -14,7 +14,8 @@ class Parameter {
         this->maxValue = maxValue;
         this->parameterName = parameterName;
     }
-    virtual ~Parameter();
+    virtual ~Parameter() {
+    }
 
     T GetValue() const {
         return value;
