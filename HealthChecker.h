@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <functional>
+#include <iostream>
 
 namespace Battery {
 
@@ -17,6 +18,10 @@ class HealthChecker final {
 
     template <typename T>
     bool IsParameterOutOfRange(const Parameter<T>& parameter) {
+        std::cout << parameter.GetParameterName() << " " 
+                  << parameter.GetValue() << " " 
+                  << parameter.GetLowerLimit() << " " 
+                  << parameter.GetUpperLimit() << "\n";
         return (parameter.GetValue() < parameter.GetLowerLimit() || parameter.GetValue() > parameter.GetUpperLimit());
     }
 
