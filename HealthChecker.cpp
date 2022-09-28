@@ -34,9 +34,9 @@ std::string HealthChecker::PrepareParameterMessage(const std::string &parameterN
     return string.str();
 }
 
-void HealthChecker::WarningOutOfRange(const std::string & parameterName, std::function<void(const std::string&)> function) {
+void HealthChecker::WarningOutOfRange(const std::string & parameterName, std::function<void(const std::string&)> notify) {
     std::string message = PrepareParameterMessage(parameterName, OUTOFRANGE);
-    function(message);
+    notify(message);
 }
 
 void HealthChecker::printOnConsole(const std::string &data) {
