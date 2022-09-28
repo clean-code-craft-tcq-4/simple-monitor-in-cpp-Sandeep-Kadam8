@@ -11,10 +11,6 @@ class Temperature: public Parameter<float> {
     Temperature(const float& value);
     Temperature(const float& value, const float& minValue, const float& maxValue);
     virtual ~Temperature();
-
- private:
-    const float TEMPERATURE_MIN = 0;
-    const float TEMPERATURE_MAX = 45;
 };
 
 } // namespace Battery

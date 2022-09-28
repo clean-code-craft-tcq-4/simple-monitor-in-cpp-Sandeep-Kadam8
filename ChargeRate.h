@@ -11,10 +11,6 @@ class ChargeRate: public Parameter<float> {
     ChargeRate(const float& value);
     ChargeRate(const float& value, const float& minValue, const float& maxValue);
     virtual ~ChargeRate();
-
- private:
-    const float CHARGERATE_MIN = 0;
-    const float CHARGERATE_MAX = 0.8;
 };
 
 } /* namespace Battery */

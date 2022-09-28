@@ -2,6 +2,10 @@
 
 namespace Battery {
 
+ 
+ const float CHARGERATE_MIN = 0;
+ const float CHARGERATE_MAX = 0.8;
+
 ChargeRate::ChargeRate(const float& value)
         :ChargeRate(value, CHARGERATE_MIN, CHARGERATE_MAX)
 {
