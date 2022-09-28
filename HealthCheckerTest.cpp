@@ -1,4 +1,7 @@
 #include "HealthChecker.h"
+#include "Temperature.h"
+#include "StateOfCharge.h"
+#include "ChargeRate.h"
 #include <assert.h>
 
 void TestIsOk() {
@@ -12,7 +15,9 @@ void TestIsParameterOutOfRange() {
   Temperature t(50, 100, 200);
   assert(BatteryHealthchecker.IsParameterOutOfRange(t) == true);
   StateOfCharge soc(5.0, 4.0, 5.0);
-  assert(BatteryHealthchecker.IsParameterOutOfRange(soc) == false);  
+  assert(BatteryHealthchecker.IsParameterOutOfRange(soc) == false); 
+  ChargeRate chargeRate(0.8, 0.0, 0.8);
+  assert(BatteryHealthchecker.IsParameterOutOfRange(chargeRate) == false);  
 }
 
 int main() {
