@@ -12,11 +12,11 @@ void TestIsOk() {
 
 void TestIsParameterOutOfRange() {
   Battery::HealthChecker BatteryHealthchecker;
-  Temperature t(50, 100, 200);
+  Battery::Temperature t(50, 100, 200);
   assert(BatteryHealthchecker.IsParameterOutOfRange(t) == true);
-  StateOfCharge soc(5.0, 4.0, 5.0);
+  Battery::StateOfCharge soc(5.0, 4.0, 5.0);
   assert(BatteryHealthchecker.IsParameterOutOfRange(soc) == false); 
-  ChargeRate chargeRate(0.8, 0.0, 0.8);
+  Battery::ChargeRate chargeRate(0.8, 0.0, 0.8);
   assert(BatteryHealthchecker.IsParameterOutOfRange(chargeRate) == false);  
 }
 
