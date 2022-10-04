@@ -6,6 +6,7 @@
 #include <sstream>
 #include <map>
 #include "Fahrenheit.h"
+#include "ToleranceChecker.h"
 
 namespace Battery {
     
