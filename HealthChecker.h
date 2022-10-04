@@ -29,8 +29,8 @@ class HealthChecker final {
  
     float GetScaledParameterValue(const float &value, const float &min, const float &max);
     void CheckForEarlyWarning(const Parameter<float> &parameter, int warningTolerancePercent);
-    void WarningAlert(const std::string & parameterName, const std::string &status, std::function<void(const std::string&)> function);
-    void AlarmOutOfRange(const std::string & parameterName, std::function<void(const std::string&)> function);
+    void WarningAlert(const std::string & parameterName, const std::string &status, std::function<void(const std::string&)> notify);
+    void AlarmOutOfRange(const std::string & parameterName, std::function<void(const std::string&)> notify);
     std::string PrepareParameterMessage(const std::string& parameterName, MessageState state, const std::string& status);
     static void printOnConsole(const std::string& data);
  private:
